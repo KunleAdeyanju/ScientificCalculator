@@ -11,7 +11,7 @@ public class coreFunctions {
 
     // method to add
     public static double addition( double x, double y){
-        return  x + y;
+        return x + y;
     }
 
 

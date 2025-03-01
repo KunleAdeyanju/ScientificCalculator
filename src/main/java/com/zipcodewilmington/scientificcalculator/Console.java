@@ -34,4 +34,8 @@ public class Console {
         double userInput = scanner.nextDouble();
         return userInput;
     }
+
+    public static String resultsFormat(double input){
+        return String.format("%.4f", input);
+    }
 }
