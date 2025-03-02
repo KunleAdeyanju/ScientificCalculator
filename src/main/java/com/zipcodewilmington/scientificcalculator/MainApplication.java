@@ -57,6 +57,46 @@ public class MainApplication {
                     }
                     isAnswerStored = true;
                     break;
+                case "multiply":
+                    // runs correct script dependent on if there is a previous answer stored
+                    if (storeAnswer == 0) {
+                        double xmul = Console.getDoubleInput("Enter number 1: ");
+                        double ymul = Console.getDoubleInput("Enter number 2: ");
+                        previousCalculationDouble = coreFunctions.multiplication(xmul, ymul);
+                        Console.println(xmul + " x " + ymul + " = " + Console.resultsFormat(previousCalculationDouble));
+                    } else if (storeAnswer == 1) {
+                        double xmul2 = oldAnswer;
+                        double ymul2 = Console.getDoubleInput("Enter number 2: ");
+                        previousCalculationDouble = coreFunctions.multiplication(xmul2, ymul2);
+                        Console.println(xmul2+ " x " + ymul2 + " = " + Console.resultsFormat(previousCalculationDouble));
+                    }
+                    isAnswerStored = true;
+                    break;
+                case "divide":
+                    // runs correct script dependent on if there is a previous answer stored
+                    if (storeAnswer == 0) {
+                        double xdiv = Console.getDoubleInput("Enter number 1: ");
+                        double ydiv = Console.getDoubleInput("Enter number 2: ");
+                        if(ydiv == 0){
+                            Console.println("Can't divide by zero");
+                        }else{
+                            previousCalculationDouble = coreFunctions.division(xdiv, ydiv);
+                            Console.println(xdiv + " / " + ydiv + " = " + Console.resultsFormat(previousCalculationDouble));
+                            isAnswerStored = true;
+                        }
+                    } else if (storeAnswer == 1) {
+                        double xdiv2 = oldAnswer;
+                        double ydiv2 = Console.getDoubleInput("Enter number 2: ");
+                        if(ydiv2 == 0){
+                            Console.println("Can't divide by zero");
+                            previousCalculationDouble = oldAnswer;
+                            isAnswerStored = true;
+                        }else {
+                            previousCalculationDouble = coreFunctions.division(xdiv2, ydiv2);
+                            Console.println(xdiv2 + " / " + ydiv2 + " = " + Console.resultsFormat(previousCalculationDouble));
+                        }
+                    }
+                    break;
                 case "square":
                     if (storeAnswer == 0) {
                         double xSquare = Console.getDoubleInput("Enter number 1: ");
@@ -78,6 +118,21 @@ public class MainApplication {
                         double xsr2 = oldAnswer;
                         previousCalculationDouble = coreFunctions.squareRoot(xsr2);
                         Console.println("The square root of " + xsr2 + " is " + Console.resultsFormat(previousCalculationDouble));
+                    }
+                    isAnswerStored = true;
+                    break;
+                case "exponentiation":
+                    // runs correct script dependent on if there is a previous answer stored
+                    if (storeAnswer == 0) {
+                        double xex = Console.getDoubleInput("Enter number 1: ");
+                        double yex = Console.getDoubleInput("Enter number 2: ");
+                        previousCalculationDouble = coreFunctions.exp(xex, yex);
+                        Console.println(xex + "^" + yex + " = " + Console.resultsFormat(previousCalculationDouble));
+                    } else if (storeAnswer == 1) {
+                        double xex2 = oldAnswer;
+                        double yex2 = Console.getDoubleInput("Enter number 2: ");
+                        previousCalculationDouble = coreFunctions.exp(xex2, yex2);
+                        Console.println(xex2+ "^" + yex2 + " = " + Console.resultsFormat(previousCalculationDouble));
                     }
                     isAnswerStored = true;
                     break;
