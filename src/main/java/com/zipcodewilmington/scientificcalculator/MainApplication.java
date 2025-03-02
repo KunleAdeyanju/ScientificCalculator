@@ -42,6 +42,21 @@ public class MainApplication {
                     }
                     isAnswerStored = true;
                     break;
+                case "subtract":
+                    // runs correct script dependent on if there is a previous answer stored
+                    if (storeAnswer == 0) {
+                        double xsub = Console.getDoubleInput("Enter number 1: ");
+                        double ysub = Console.getDoubleInput("Enter number 2: ");
+                        previousCalculationDouble = coreFunctions.subtract(xsub, ysub);
+                        Console.println(xsub + " - " + ysub + " = " + Console.resultsFormat(previousCalculationDouble));
+                    } else if (storeAnswer == 1) {
+                        double xs2 = oldAnswer;
+                        double ysub2 = Console.getDoubleInput("Enter number 2: ");
+                        previousCalculationDouble = coreFunctions.subtract(xs2, ysub2);
+                        Console.println(xs2+ " - " + ysub2 + " = " + Console.resultsFormat(previousCalculationDouble));
+                    }
+                    isAnswerStored = true;
+                    break;
                 case "square":
                     if (storeAnswer == 0) {
                         double xSquare = Console.getDoubleInput("Enter number 1: ");

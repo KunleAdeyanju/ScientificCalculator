@@ -33,20 +33,15 @@ public class coreFunctions {
         return x/y;
     }
 
-    // method to exponentiation
-    public static double exp(double v, double v1) {
-        return exp(0.0, 0.0);
-    }
-
-    private static <__TMP__> __TMP__ exp() {
-
-        return null;
+    // method to exponentiation x, y ..x^y
+    public static double exp(double x, double y) {
+        return Math.pow(x,y);
     }
 
     // method to inverse
     public static double inverse(double x) {
 
-        return (x);
+        return 1/x;
     }
 
     // method to square numbers
@@ -56,14 +51,15 @@ public class coreFunctions {
     }
 
     // method to Invert the sign
-    public static void print(int i) {
-        System.out.printf("\nReversed %s to %s .", i, -i);
+    public static double invert(int x) {
+        return -1*x;
+    }
 
     // square root
-    public static double squareRoot(double x)
-        {
+    public static double squareRoot(double x){
             return Math.sqrt(x);
     }
+
 
 
 
