@@ -14,10 +14,6 @@ public class coreFunctions {
         return x + y;
     }
 
-
-
-
-
     // method to square numbers
     public static double square(double x){
         return x*x;
