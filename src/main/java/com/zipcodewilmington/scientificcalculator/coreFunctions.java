@@ -40,7 +40,6 @@ public class coreFunctions {
 
     // method to inverse
     public static double inverse(double x) {
-
         return 1/x;
     }
 
