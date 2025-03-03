@@ -24,26 +24,31 @@ public class coreFunctionsTest {
         assertEquals(40, actual, 0.001);
     }
 
+    @Test
     public void testdivision(){
         double actual = coreFunctions.division(10,5);
         assertEquals(2, actual, 0.001);
     }
 
+    @Test
     public void testexp(){
         double actual = coreFunctions.exp(4,2);
         assertEquals(16, actual, 0.001);
     }
 
+    @Test
     public void testinverse(){
         double actual = coreFunctions.inverse(4);
-        assertEquals(1/4, actual, 0.001);
+        assertEquals(0.25, actual, 0.001);
     }
 
+    @Test
     public void testsquare(){
         double actual = coreFunctions.square(4);
         assertEquals(16, actual, 0.001);
     }
 
+    @Test
     public void testsquareroot(){
         double actual = coreFunctions.squareRoot(4);
         assertEquals(2, actual, 0.001);

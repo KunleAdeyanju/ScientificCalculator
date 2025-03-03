@@ -171,7 +171,6 @@ public class MainApplication {
                     isAnswerStored = true;
                     break;
 
-                    break;
                 // in case of typo return to beginning of the loop
                 default:
                     Console.println("That wasn't an option");
