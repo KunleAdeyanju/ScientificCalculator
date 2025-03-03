@@ -146,6 +146,7 @@ public class MainApplication {
                             previousCalculationDouble = coreFunctions.inverse(xinv);
                             Console.println("The inverse of " + xinv + " is " + Console.resultsFormat(previousCalculationDouble));
                         }
+
                     } else if (storeAnswer == 1) {
                         double xinv2 = oldAnswer;
                         if(xinv2 == 0) {
@@ -156,8 +157,9 @@ public class MainApplication {
                         previousCalculationDouble = coreFunctions.inverse(xinv2);
                         Console.println("The inverse of " + xinv2 + " is " + Console.resultsFormat(previousCalculationDouble));
                         }
-                        isAnswerStored = true;
                     }
+                    isAnswerStored = true;
+                    break;
                 case "invert":
                     if (storeAnswer == 0) {
                         double xinvt = Console.getDoubleInput("Enter number 1: ");
