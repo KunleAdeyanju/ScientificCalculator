@@ -17,11 +17,10 @@ public class coreFunctionsTest {
         double actual = coreFunctions.subtract(10,4);
         assertEquals(6, actual, 0.001);
     }
-}
 
-@Test
-public void testmultiplication(){
-        double actual = coreFunctions.multiply(10,4);
+    @Test
+    public void testmultiplication(){
+        double actual = coreFunctions.multiplication(10,4);
         assertEquals(40, actual, 0.001);
     }
 
@@ -46,6 +45,8 @@ public void testmultiplication(){
     }
 
     public void testsquareroot(){
-        double actual = coreFunctions.squareroot(4);
+        double actual = coreFunctions.squareRoot(4);
         assertEquals(2, actual, 0.001);
     }
+}
+
