@@ -18,3 +18,33 @@ public class coreFunctionsTest {
         assertEquals(6, actual, 0.001);
     }
 }
+
+public void testmultiplication(){
+        double actual = coreFunctions.multiply(10,4);
+        assertEquals(40, actual, 0.001);
+    }
+
+    public void testdivision(){
+        double actual = coreFunctions.division(10,5);
+        assertEquals(2, actual, 0.001);
+    }
+
+    public void testexp(){
+        double actual = coreFunctions.exp(4,2);
+        assertEquals(16, actual, 0.001);
+    }
+
+    public void testinverse(){
+        double actual = coreFunctions.inverse(4);
+        assertEquals(1/4, actual, 0.001);
+    }
+
+    public void testsquare(){
+        double actual = coreFunctions.square(4);
+        assertEquals(16, actual, 0.001);
+    }
+
+    public void testsquareroot(){
+        double actual = coreFunctions.squareroot(4);
+        assertEquals(2, actual, 0.001);
+    }
