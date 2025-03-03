@@ -90,11 +90,12 @@ public class MainApplication {
                         if(ydiv2 == 0){
                             Console.println("Can't divide by zero");
                             previousCalculationDouble = oldAnswer;
-                            isAnswerStored = true;
+
                         }else {
                             previousCalculationDouble = coreFunctions.division(xdiv2, ydiv2);
                             Console.println(xdiv2 + " / " + ydiv2 + " = " + Console.resultsFormat(previousCalculationDouble));
                         }
+                        isAnswerStored = true;
                     }
                     break;
                 case "square":
@@ -121,7 +122,7 @@ public class MainApplication {
                     }
                     isAnswerStored = true;
                     break;
-                case "exponentiation":
+                case "exp":
                     // runs correct script dependent on if there is a previous answer stored
                     if (storeAnswer == 0) {
                         double xex = Console.getDoubleInput("Enter number 1: ");
@@ -135,6 +136,29 @@ public class MainApplication {
                         Console.println(xex2+ "^" + yex2 + " = " + Console.resultsFormat(previousCalculationDouble));
                     }
                     isAnswerStored = true;
+                    break;
+                case "inverse":
+                    if (storeAnswer == 0) {
+                        double xinv = Console.getDoubleInput("Enter number 1: ");
+                        if(xinv == 0){
+                            Console.println("Can't divide by zero");
+                        }else {
+                            previousCalculationDouble = coreFunctions.inverse(xinv);
+                            Console.println("The inverse of " + xinv + " is " + Console.resultsFormat(previousCalculationDouble));
+                        }
+                    } else if (storeAnswer == 1) {
+                        double xinv2 = oldAnswer;
+                        if(xinv2 == 0) {
+                            Console.println("Can't divide by zero");
+                            previousCalculationDouble = oldAnswer;
+
+                        }else{
+                        previousCalculationDouble = coreFunctions.inverse(xinv2);
+                        Console.println("The inverse of " + xinv2 + " is " + Console.resultsFormat(previousCalculationDouble));
+                        }
+                        isAnswerStored = true;
+                    }
+
                     break;
                 // in case of typo return to beginning of the loop
                 default:

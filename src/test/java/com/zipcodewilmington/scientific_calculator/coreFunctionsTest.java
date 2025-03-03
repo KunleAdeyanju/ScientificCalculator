@@ -19,6 +19,7 @@ public class coreFunctionsTest {
     }
 }
 
+@Test
 public void testmultiplication(){
         double actual = coreFunctions.multiply(10,4);
         assertEquals(40, actual, 0.001);
