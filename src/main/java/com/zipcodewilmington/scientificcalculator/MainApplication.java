@@ -158,6 +158,18 @@ public class MainApplication {
                         }
                         isAnswerStored = true;
                     }
+                case "invert":
+                    if (storeAnswer == 0) {
+                        double xinvt = Console.getDoubleInput("Enter number 1: ");
+                        previousCalculationDouble = coreFunctions.invert(xinvt);
+                        Console.println("The sign inversion of " + xinvt + " is " + Console.resultsFormat(previousCalculationDouble));
+                    } else if (storeAnswer == 1) {
+                        double xinvt2 = oldAnswer;
+                        previousCalculationDouble = coreFunctions.invert(xinvt2);
+                        Console.println("The sign inversion of " + xinvt2 + " is " + Console.resultsFormat(previousCalculationDouble));
+                    }
+                    isAnswerStored = true;
+                    break;
 
                     break;
                 // in case of typo return to beginning of the loop

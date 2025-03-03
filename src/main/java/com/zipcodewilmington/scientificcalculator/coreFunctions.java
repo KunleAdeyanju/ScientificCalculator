@@ -50,7 +50,7 @@ public class coreFunctions {
     }
 
     // method to Invert the sign
-    public static double invert(int x) {
+    public static double invert(double x) {
         return -1*x;
     }
 
