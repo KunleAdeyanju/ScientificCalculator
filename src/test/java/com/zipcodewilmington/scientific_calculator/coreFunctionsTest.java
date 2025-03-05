@@ -2,33 +2,67 @@ package com.zipcodewilmington.scientific_calculator;
 
 import com.zipcodewilmington.scientificcalculator.coreFunctions;
 import org.junit.jupiter.api.Test;
+
+import static java.lang.Double.NaN;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class coreFunctionsTest {
 
     @Test
-    public void testAdd(){
+    public void testAdd1(){
         double actual = coreFunctions.addition(4,5);
         assertEquals(9,actual,0.001);
     }
 
     @Test
-    public void testSubtraction(){
+    public void testAdd2(){
+        double actual = coreFunctions.addition(20000,410);
+        assertEquals(20410,actual,0.001);
+    }
+
+    @Test
+    public void testAdd3(){
+        double actual = coreFunctions.addition(4.5,6.72);
+        assertEquals(11.22,actual,0.001);
+    }
+
+    @Test
+    public void testSubtraction1(){
         double actual = coreFunctions.subtract(10,4);
         assertEquals(6, actual, 0.001);
     }
 
     @Test
-    public void testmultiplication(){
+    public void testSubtraction2(){
+        double actual = coreFunctions.subtract(89.7545,76.554);
+        assertEquals(13.2005, actual, 0.001);
+    }
+
+    @Test
+    public void testSubtraction3(){
+        double actual = coreFunctions.subtract(345,269);
+        assertEquals(76, actual, 0.001);
+    }
+
+    @Test
+    public void testmultiplication1(){
         double actual = coreFunctions.multiplication(10,4);
         assertEquals(40, actual, 0.001);
     }
 
     @Test
-    public void testdivision(){
-        double actual = coreFunctions.division(10,5);
-        assertEquals(2, actual, 0.001);
+    public void testmultiplication2(){
+        double actual = coreFunctions.multiplication(42.678,9.872);
+        assertEquals(421.3172, actual, 0.001);
     }
+
+    @Test
+    public void testmultiplication3(){
+        double actual = coreFunctions.multiplication(4425,10000);
+        assertEquals(44250000, actual, 0.001);
+    }
+
+
 
     @Test
     public void testexp(){
@@ -36,11 +70,6 @@ public class coreFunctionsTest {
         assertEquals(16, actual, 0.001);
     }
 
-    @Test
-    public void testinverse(){
-        double actual = coreFunctions.inverse(4);
-        assertEquals(0.25, actual, 0.001);
-    }
 
     @Test
     public void testsquare(){
@@ -48,10 +77,44 @@ public class coreFunctionsTest {
         assertEquals(16, actual, 0.001);
     }
 
+
+
+    /*
+
+
+
+
+     */
+
+    @Test
+    public void testdivision1(){
+        double actual = coreFunctions.division(10,5);
+        assertEquals(2, actual, 0.001);
+    }
+
+    @Test
+    public void testdivision2(){
+        double actual = coreFunctions.division(0.5,16);
+        assertEquals(0.0313, actual, 0.001);
+    }
+
+    @Test
+    public void testdivision3(){
+        String error = "Err";
+        double actual = (coreFunctions.division(10,0));
+        assertEquals(error, actual);
+    }
+
     @Test
     public void testsquareroot(){
         double actual = coreFunctions.squareRoot(4);
         assertEquals(2, actual, 0.001);
+    }
+
+    @Test
+    public void testinverse(){
+        double actual = coreFunctions.inverse(4);
+        assertEquals(0.25, actual, 0.001);
     }
 }
 

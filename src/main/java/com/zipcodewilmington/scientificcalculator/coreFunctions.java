@@ -29,12 +29,16 @@ public class coreFunctions {
 
     // method to division
     public static double division( double x, double y) {
-
+//        if( y == 0){
+//            System.out.println("Err");
+//            break;
+//        }
         return x/y;
     }
 
     // method to exponentiation x, y ..x^y
     public static double exp(double x, double y) {
+
         return Math.pow(x,y);
     }
 
@@ -51,12 +55,14 @@ public class coreFunctions {
 
     // method to Invert the sign
     public static double invert(double x) {
+
         return -1*x;
     }
 
     // square root
     public static double squareRoot(double x){
-            return Math.sqrt(x);
+
+        return Math.sqrt(x);
     }
 
 
