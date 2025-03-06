@@ -15,11 +15,25 @@ public class MainApplication {
         int storeAnswer = 0;
         double oldAnswer = 0;
         boolean isAnswerStored = false;
+        String[] functions = {"add", "subtract", "multiply", "divide", "square", "square root", "exponentiation (exp)",
+        "inverse", "invert"};
 
-        Console.println("Welcome to my calculator!");
+        Console.println("Welcome to my calculator!" );
         // keep the program operating until user signs they are done
         do {
+            System.out.println("\n");
+
+            for(int i =0; i < functions.length; i++){
+                if(i % 3 == 0 && i !=0 ){
+                    System.out.print(functions[i] + "\n");
+                }else{
+                    System.out.print(functions[i] + " | ");
+                }
+
+            }
+            System.out.println("\n");
             String s = Console.getStringInput("What would you like to do");
+
 
 
             // cycles through the calculation available to the user
@@ -123,6 +137,7 @@ public class MainApplication {
                     isAnswerStored = true;
                     break;
                 case "exp":
+                case "exponentiation":
                     // runs correct script dependent on if there is a previous answer stored
                     if (storeAnswer == 0) {
                         double xex = Console.getDoubleInput("Enter number 1: ");

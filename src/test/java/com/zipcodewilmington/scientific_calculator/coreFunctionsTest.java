@@ -98,12 +98,7 @@ public class coreFunctionsTest {
         assertEquals(0.0313, actual, 0.001);
     }
 
-    @Test
-    public void testdivision3(){
-        String error = "Err";
-        double actual = (coreFunctions.division(10,0));
-        assertEquals(error, actual);
-    }
+
 
     @Test
     public void testsquareroot(){
@@ -115,6 +110,24 @@ public class coreFunctionsTest {
     public void testinverse(){
         double actual = coreFunctions.inverse(4);
         assertEquals(0.25, actual, 0.001);
+    }
+
+    @Test
+    public void testdividebyzero1(){
+        boolean actual = coreFunctions.isDividedByZero(0.0003);
+        assertFalse(actual);
+    }
+
+    @Test
+    public void testdividebyzero2(){
+        boolean actual = coreFunctions.isDividedByZero(0.000);
+        assertTrue(actual);
+    }
+
+    @Test
+    public void testdividebyzero3(){
+        boolean actual = coreFunctions.isDividedByZero(0.00000000000000000000000000000000003);
+        assertFalse(actual);
     }
 }
 
