@@ -29,11 +29,14 @@ public class coreFunctions {
 
     // method to division
     public static double division( double x, double y) {
-//        if( y == 0){
-//            System.out.println("Err");
-//            break;
-//        }
+
         return x/y;
+    }
+
+    // method to check if something is being divided by zero
+    public static boolean isDividedByZero(double x){
+
+        return (x==0);
     }
 
     // method to exponentiation x, y ..x^y
